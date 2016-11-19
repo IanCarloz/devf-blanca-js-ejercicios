@@ -20,34 +20,23 @@
           var n2 = parseInt(document.querySelector("#numero2").value);
           var n3 = parseInt(document.querySelector("#numero3").value);
 
-          var maximo = max(n1, n2, n3);
+          var maximo = max(n1, n2);
+          maximo = max(maximo, n3);
 
           var resultado = document.querySelector("#resultado");
           resultado.innerHTML = "Max: " + maximo;
         }
 
-        function max(numero1, numero2, numero3) {
-          /*
-            Ejercicio: Copia tu función "max" del ejercicio 2 y pegarlo abajo
-            de esta función (después del colchete de cierre). Termina esta
-            función para llamar a "max" varias veces para calcular el valor
-            máximo de los tres números entrados y escribir el resultado en
-            el div "#resultado".
-           */
-           var maximo;
-
-           if (numero1>numero2 && numero1>numero3) {
-             maximo = numero1
-           } else if (numero2>numero1 && numero2>numero3) {
-             maximo = numero2
-           } else if (numero3>numero1 && numero3>numero2) {
-             maximo = numero3
-           }
-          return maximo;// Tu código acá!
+        function max(n1, n2) {
+          var maximo;
+          if (n1 > n2) {
+            maximo = hector;
+          } else {
+            maximo = n2;
+          }
+          return maximo;
         }
 
-        // Pega tu función "max" acá:
-
-    </script>
-  </body>
-</html>
+      </script>
+    </body>
+  </html>
