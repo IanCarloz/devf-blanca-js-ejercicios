@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../_recursos/main.css">
+    <title>Dev.F JS Ejercicios - Colecciones - 06. Tabla de multiplicar</title>
+</head>
+
+<body>
+    <h1>Tabla de multiplicar</h1>
+    <div class="formulario">
+        Mínimo: <input type="text" name="minimo" id="minimo"><br /> Máximo: <input type="text" name="maximo" id="maximo"><br />
+        <button onclick="dibujar_tabla();">Dibujar Tabla!</button>
+        <div id="resultado"></div>
+    </div>
+    <script>
+        function dibujar_tabla() {
+            document.querySelector("#resultado").innerHTML = "";
+
+            var resultado = document.querySelector("#resultado");
+
+            var minimo = parseInt(document.querySelector("#minimo").value);
+            var maximo = parseInt(document.querySelector("#maximo").value);
+            //var resultado = document.querySelector("#resultado");
+
+            var tabla   = document.createElement("table");
+            var tblBody = document.createElement("tbody");
+
+            for (i = minimo; i <= maximo; i++) {
+              var hilera = document.createElement("tr");
+                for (j = minimo; j <= maximo; j++) {
+                  var celda = document.createElement("td");
+                  //var cabecera = document.createElement("td.tableheader")
+                  var textoCelda = document.createTextNode(i*j)
+                  celda.appendChild(textoCelda);
+                  //cabecera.appendChild(textoCelda);
+                  hilera.appendChild(celda);
+                }
+                tblBody.appendChild(hilera);
+            }
+            tabla.appendChild(tblBody);
+            resultado.appendChild(tabla);
+            tabla.setAttribute("border", "2");
+        }
+    </script>
+</body>
+
+</html>
