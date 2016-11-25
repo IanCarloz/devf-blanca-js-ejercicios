@@ -23,7 +23,6 @@
 
             var minimo = parseInt(document.querySelector("#minimo").value);
             var maximo = parseInt(document.querySelector("#maximo").value);
-            //var resultado = document.querySelector("#resultado");
 
             var tabla   = document.createElement("table");
             var tblBody = document.createElement("tbody");
@@ -32,10 +31,8 @@
               var hilera = document.createElement("tr");
                 for (j = minimo; j <= maximo; j++) {
                   var celda = document.createElement("td");
-                  //var cabecera = document.createElement("td.tableheader")
-                  var textoCelda = document.createTextNode(i*j)
+                  var textoCelda = document.createTextNode(i*j);
                   celda.appendChild(textoCelda);
-                  //cabecera.appendChild(textoCelda);
                   hilera.appendChild(celda);
                 }
                 tblBody.appendChild(hilera);
