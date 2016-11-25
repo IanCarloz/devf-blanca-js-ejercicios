@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../_recursos/main.css">
     <title>Dev.F JS Ejercicios - Colecciones - 03. FizzBuzz</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>Máximo de N números</h1>
     <div class="formulario">
-      <button onclick="correr_fizz_buzz();">FizzBuzz!</button>
-      <div id="resultado"></div>
+        <button onclick="correr_fizz_buzz();">FizzBuzz!</button>
+        <div id="resultado"></div>
     </div>
     <script>
-<<<<<<< HEAD
-=======
-
->>>>>>> bd3de95333a9d0b6705a798c262e45304256a9fd
         function fizz_buzz(max) {
-          /*
-            Ejercicio:
-              (1) Modifica el ciclo abajo para mostrar "Fizz" cada vez
-                  el número sea divisible por 3.
-              (2) Modifica el ciclo para mostrar "Buzz" cada vez que el
-                  número sea divisible por 5.
-              (3) Muestra "FizzBuzz" cada vez que el número sea divisible por
-                  los dos 3 y 5.
-           */
-<<<<<<< HEAD
-=======
-          
->>>>>>> bd3de95333a9d0b6705a798c262e45304256a9fd
-          for (var i = 0; i <= max; i++) {
-            print(i, true);
-          }
+
+            /*
+              Ejercicio:
+                (1) Modifica el ciclo abajo para mostrar "Fizz" cada vez
+                    el número sea divisible por 3.
+                (2) Modifica el ciclo para mostrar "Buzz" cada vez que el
+                    número sea divisible por 5.
+                (3) Muestra "FizzBuzz" cada vez que el número sea divisible por
+                    los dos 3 y 5.
+             */
+
+            for (var i = 1; i <= max; i++) {
+                if (i % 15 == 0) {
+                    print("FizzBuzz", true);
+                } else if (i % 3 == 0) {
+                    print("Fizz", true);
+                } else if (i % 5 == 0) {
+                    print("Buzz", true)
+                } else {
+                      print(i, true);
+                }
+            }
         }
         // ******************************************
         // No hay que cambiar nada de acá para abajo.
         // ******************************************
-<<<<<<< HEAD
         function correr_fizz_buzz() {
-          fizz_buzz(100);
-        }
-=======
-
-        function correr_fizz_buzz() {
-          fizz_buzz(100);
+            fizz_buzz(100);
         }
 
->>>>>>> bd3de95333a9d0b6705a798c262e45304256a9fd
         function print(valor, append) {
-          var resultado = document.querySelector("#resultado");
-          if (append) {
-            resultado.innerHTML += valor + "<br>";
-          } else {
-            resultado.innerHTML = valor + "<br>";
-          }
+            var resultado = document.querySelector("#resultado");
+            if (append) {
+                resultado.innerHTML += valor + "<br>";
+            } else {
+                resultado.innerHTML = valor + "<br>";
+            }
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> bd3de95333a9d0b6705a798c262e45304256a9fd
     </script>
-  </body>
+</body>
+
 </html>

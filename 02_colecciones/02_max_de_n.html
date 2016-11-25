@@ -15,31 +15,31 @@
       <div id="resultado"></div>
     </div>
     <script>
-
         function max_de_n(numeros) {
-          var maximo;
-
+          var maximo = 0;
           /*
             Ejercicio: `numeros` es un array de números. Usa un
             bucle `for` para encontrar el máximo.
            */
 
+          for(i in numeros){
+            n_actual = parseInt(numeros[i]);
+            if(n_actual > maximo){
+              maximo = n_actual;
+            }
+          }
           return maximo;
         }
         // ******************************************
         // No hay que cambiar nada de acá para abajo.
         // ******************************************
-
         function calcular_max() {
           var numeros = document.querySelector("#numeros").value;
           numeros = numeros.split(/[ ,]+/);
-
           var maximo = max_de_n(numeros);
-
           var resultado = document.querySelector("#resultado");
           resultado.innerHTML = "Max: " + maximo;
         }
-
     </script>
   </body>
 </html>
